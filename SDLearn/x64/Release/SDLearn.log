@@ -1,0 +1,10 @@
+﻿  Chip8.cpp
+  main.cpp
+C:\Users\Richard\source\repos\SDLearn\SDLearn\Platform.h(1,10): error C1083: Não é possível abrir arquivo incluir: 'SDL3/SDL.h': No such file or directory
+  (compilando o arquivo fonte 'Chip8.cpp')
+  
+C:\Users\Richard\source\repos\SDLearn\SDLearn\Platform.h(1,10): error C1083: Não é possível abrir arquivo incluir: 'SDL3/SDL.h': No such file or directory
+  (compilando o arquivo fonte 'main.cpp')
+  
+  SDLearn.cpp
+C:\Users\Richard\source\repos\SDLearn\SDLearn\SDLearn.cpp(11,10): error C1083: Não é possível abrir arquivo incluir: 'SDL3/SDL.h': No such file or directory

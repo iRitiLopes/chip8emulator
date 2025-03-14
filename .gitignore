@@ -1,0 +1,10 @@
+# .gitignore for cpp project no ignoring visual studio files
+
+# Ignore build output
+build/
+
+.vscode/
+
+.vs/
+
+.cmake/
