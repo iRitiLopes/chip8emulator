@@ -86,7 +86,10 @@ void Chip8::load(const char* path) {
 }
 
 void Chip8::processInput() {
-	platform.processInput(keypad);
+	platform.processInput(keypad, &close);
+	if (close) {
+		exit(0);
+	}
 }
 
 int counter = 0;

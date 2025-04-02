@@ -65,19 +65,28 @@ public:
 
 	~Platform()
 	{
+		quit();
+	}
+
+	void quit() {
 		SDL_DestroyTexture(texture);
 		SDL_DestroyRenderer(renderer);
 		SDL_DestroyWindow(window);
 		SDL_Quit();
 	}
 
-	void processInput(uint8_t* keys) {
+	void processInput(uint8_t* keys, bool* close) {
 		SDL_Event event;
 
 		while (SDL_PollEvent(&event)) {
 			switch (event.type) {
 			case SDL_EVENT_KEY_DOWN:
 				switch (event.key.key) {
+					case SDLK_ESCAPE:
+						std::cout << "Escape key pressed!" << std::endl;
+						quit();
+						*close = true;
+						break;
 					case SDLK_X:
 						keys[0] = 1;
 						break;

@@ -8,3 +8,5 @@ build/
 .vs/
 
 .cmake/
+
+x64/

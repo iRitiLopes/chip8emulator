@@ -1,4 +1,4 @@
-set(PROJECT_NAME SDLearn)
+set(PROJECT_NAME chip8)
 
 ################################################################################
 # Source groups
@@ -26,8 +26,15 @@ set(ALL_FILES
 ################################################################################
 add_executable(${PROJECT_NAME} ${ALL_FILES})
 
+add_custom_command(
+    TARGET ${PROJECT_NAME}
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${CMAKE_SOURCE_DIR}/chip8/SDL3.dll"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}>/SDL3.dll"
+)
+
 use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
-set(ROOT_NAMESPACE SDLearn)
+set(ROOT_NAMESPACE chip8)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     VS_GLOBAL_KEYWORD "Win32Proj"

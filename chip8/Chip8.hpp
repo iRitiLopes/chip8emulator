@@ -24,6 +24,7 @@ class Chip8 {
 	uint32_t video[64 * 32]{};
 	uint16_t opcode;
 	bool debug = false;
+	bool close = false;
 
 	Platform platform{ "chip8", VIDEO_WIDTH * VIDEO_SCALE, VIDEO_HEIGHT * VIDEO_SCALE, VIDEO_WIDTH, VIDEO_HEIGHT };
 
